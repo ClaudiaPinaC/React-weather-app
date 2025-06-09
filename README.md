@@ -1,4 +1,4 @@
-# My React App
+# React Weather App
 
 This is a simple React application that demonstrates the basic structure and setup of a React project.
 
@@ -14,8 +14,8 @@ This is a simple React application that demonstrates the basic structure and set
 To get started with this project, clone the repository and install the dependencies:
 
 ```bash
-git clone <repository-url>
-cd my-react-app
+git clone <https://github.com/ClaudiaPinaC/React-weather-app.git>
+cd React-weather-app
 npm install
 ```
 
