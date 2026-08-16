@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import './App.css';
+import bgImage from './assets/pexels-sky.jpg';
 import Weather from './components/Weather';
 import { Dimmer, Loader } from 'semantic-ui-react';
 
@@ -6,6 +8,15 @@ const App = () => {
     const [lat, setLat] = useState([]);
     const [long, setLong] = useState([]);
     const [data, setData] = useState([]);
+
+    const bgStyle = {
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100vw',
+        height: '100vh',
+        backgroundRepeat: 'no-repeat',
+    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,7 +36,7 @@ const App = () => {
     }, [lat, long]);
 
     return (
-        <div className="App">
+        <div className="app" style={bgStyle}>
             {(typeof data.main != 'undefined') ? (
                 <Weather weatherData={data} />
             ) : (

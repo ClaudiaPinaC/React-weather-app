@@ -1,11 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
 
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  padding: 20px;
+}
+
 .main {
   width: 700px;
+  height: fit-content;
   border-radius: 15px;
   background-color: #01579b;
-  justify-self: center;
-  margin: 50px;
 }
 
 .top {
@@ -43,7 +56,7 @@
   font-size: 18px;
 }
 
-.flex {
+.flex-rows {
   display: flex;
   justify-content: space-between;
 }
@@ -66,4 +79,44 @@
 .button {
   width: 35px;
   height: 35px;
+}
+
+.blur-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /* Semi-transparent background color */
+  background-color: rgba(255, 255, 255, 0.7);
+
+  /* The core blur effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+
+  /* Optional: subtle border for a cleaner glassmorphism look */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #0070f3;
 }
