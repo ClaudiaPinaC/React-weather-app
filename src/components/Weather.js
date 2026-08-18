@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { Button } from 'semantic-ui-react';
-import Header from './Header';
+import HeaderNavBar from './HeaderNavBar';
 
 const refresh = () => {
     window.location.reload();
@@ -10,10 +10,10 @@ const refresh = () => {
 const Weather = ({ weatherData }) => {
     return (
         <div className='weather-container'>
-            <Header />
+            <HeaderNavBar />
             <div className='main'>
                 <div className='top'>
-                    <div className="header">City Name: {weatherData.name}</div>
+                    <div className="card-header">City Name: {weatherData.name}</div>
                     <Button className='button' inverted color='blue' circular icon='refresh' onClick={refresh}></Button>
                 </div>
                 <div className='flex-rows'>
